@@ -1,20 +1,22 @@
 
 import os
 from dotenv import load_dotenv
-from langchain_ollama import ChatOllama
+from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage, AIMessage
 
 # Load Configuration from .env file
 load_dotenv()
 
-# Initialize the ChatOllama model
+# Initialize the Chat Model
 model_name = os.getenv("MODEL", "qwen3:1.7b")
-base_url = os.getenv("BASE_URL", "http://localhost:11434")
+base_url = os.getenv("BASE_URL", "http://localhost:11434/v1")
+api_key = os.getenv("API_KEY", "ollama")
 
-# Create the LangChain Ollama chat model client
-llm = ChatOllama(
+# Create the LangChain Chat Model Client
+llm = ChatOpenAI(
     model=model_name,
-    base_url=base_url
+    base_url=base_url,
+    api_key=api_key
 )
 
 print("*" * 40)
