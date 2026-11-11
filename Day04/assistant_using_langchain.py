@@ -24,18 +24,48 @@ print("*" * 40)
 print("My LangChain Ollama Assistant")
 print("*" * 40)
 
+# Define different roles for the assistant
+roles = {
+    "1": "You are a helpful assistant. Explain every concept with simple examples and provide code snippets when necessary.",
+    "2": "You are a helpful assistant. Provide concise answers with code snippets when necessary.",
+    "3": "You are a helpful assistant. Provide detailed explanations with examples and code snippets when necessary.",
+    "4": "You are a helpful assistant. Provide step-by-step explanations with examples and code snippets when necessary."
+}
+
+# Define role names
+role_names = {
+    "1": "Friendly Assistant",
+    "2": "Concise Assistant",
+    "3": "Detailed Assistant",
+    "4": "Step-by-Step Assistant"
+}
+
+# Display role selection menu
+print("\nSelect a role for the assistant:")
+
+for key, value in role_names.items():
+    print(f"{key}. {value}")
+
+# Get user's role selection
+selected_role = input("\nEnter the number of your preferred role: ")
+
+# Validate role selection
+if selected_role not in roles:
+    print("Invalid selection. Using default role.")
+    selected_role = "1"
+
+print(f"\nSelected Role: {role_names[selected_role]}")
+
 # Saving conversation messages
 message = [
-    SystemMessage(
-        content="You are a helpful assistant. Explain every concept with simple examples and provide code snippets when necessary."
-    )
+    SystemMessage(content=roles[selected_role])
 ]
 
 while True:
 
     user_input = input("\nYou: ")
 
-    if user_input.lower() == "exit":
+    if user_input.lower().strip() == "exit":
         print("Exiting the assistant. Goodbye!")
         break
 
@@ -44,6 +74,7 @@ while True:
 
     # Invoke model with conversation history
     try:
+
         response = llm.invoke(message)
 
         # Append AI response
@@ -69,3 +100,4 @@ while True:
 
     except Exception as e:
         print("\nError:", e)
+        message.pop()
