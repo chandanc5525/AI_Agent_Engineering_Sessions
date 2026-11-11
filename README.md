@@ -41,8 +41,40 @@ API_KEY=ollama
 MODEL=qwen3:1.7b
 ```
 
-## Run Version v1 LLM Chat Assistant Model
+## Run Version v1 LLM Chat Assistant Model at Various Stages
 
+---
+
+## AI Agent Engineering Sessions – Daily Progress
+
+### Day 01: Building a Basic AI Agent
+Developed a basic AI Agent capable of understanding user prompts and generating relevant responses using an LLM.
+
+**Execution:**
+```bash
+(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day01> uv run streamlit run app.py
 ```
-(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day01>uv run streamlit run app.py
+
+### Day 02: Implementing Conversation Memory
+Enhanced the AI Agent with conversation memory, enabling it to retain previous questions and responses and use conversational context to generate relevant answers.
+
+**Execution:**
+```bash
+(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day02> uv run streamlit run app.py
+```
+
+### Day 03: Developing a Context-Aware Expert AI Agent
+Developed a context-aware AI Agent designed to provide expert-level responses based on a single, defined knowledge context.
+
+**Execution:**
+```bash
+(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day03> uv run streamlit run app.py
+```
+
+### Day 04: Enhancing AI Agent Response Capabilities
+Developed an enhanced AI Agent focused on improving its ability to understand user prompts and generate relevant, contextually appropriate responses.
+
+**Execution:**
+```bash
+(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day04> uv run streamlit run app.py
 ```
