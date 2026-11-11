@@ -40,3 +40,9 @@ BASE_URL=http://localhost:11434/v1
 API_KEY=ollama
 MODEL=qwen3:1.7b
 ```
+
+## Run Version v1 LLM Chat Assistant Model
+
+```
+(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day01>uv run streamlit run app.py
+```

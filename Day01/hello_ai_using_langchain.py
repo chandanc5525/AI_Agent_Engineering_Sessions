@@ -1,4 +1,5 @@
 # Referecen Material: https://docs.langchain.com/oss/python/integrations/chat/ollama
+
 from langchain.messages import HumanMessage
 from langchain_ollama import ChatOllama
 
