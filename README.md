@@ -78,3 +78,18 @@ Developed an enhanced AI Agent focused on improving its ability to understand us
 ```bash
 (AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day04> uv run streamlit run app.py
 ```
+
+### Day 05: Building a LangChain Tool-Calling Agent
+Upgraded the assistant into an agent that can decide when to use tools. The agent has access to a safe calculator, current date/time, workspace file read/write/list tools, and a word counter, then uses the tool observations to produce the final answer.
+
+**Execution (Streamlit):**
+```bash
+(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day05> uv run streamlit run app.py
+```
+
+**Execution (Terminal):**
+```bash
+(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day05> uv run python assistant_using_langchain.py
+```
+
+File tools are sandboxed to `Day05/workspace`. The agent loads configuration from `Day05/.env`.
