@@ -145,7 +145,9 @@ st.set_page_config(
     layout="centered",
 )
 
-st.title("🛠️ Day05 - LangChain Tool Agent")
+st.title("LangChain Tool Agent")
+st.subheader("A local agent that can call tools to answer your questions")
+st.subheader("Designed By: Chandan Chaudhari")
 st.caption("Powered by LangChain + Ollama + local tools")
 
 with st.sidebar:

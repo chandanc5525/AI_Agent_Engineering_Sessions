@@ -87,9 +87,7 @@ Upgraded the assistant into an agent that can decide when to use tools. The agen
 (AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day05> uv run streamlit run app.py
 ```
 
-**Execution (Terminal):**
-```bash
-(AI_Agent_Engineering_Sessions) C:\AI_Agent_Engineering_Sessions\Day05> uv run python assistant_using_langchain.py
-```
+## Day06: Build RAG Model [Document Ingestion and Parsing]
 
-File tools are sandboxed to `Day05/workspace`. The agent loads configuration from `Day05/.env`.
+
+## Day07: Build RAG Model [Vector Embedding and Vector Database]
